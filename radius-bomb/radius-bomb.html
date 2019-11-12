@@ -70,6 +70,15 @@
         .radius-form .custom-btns{
             margin: 10px 0;
         }
+		.radius-form .ml-auto{
+			display: flex;
+			align-items: center;
+		}
+
+		.radius-form #non_selected{
+			max-width: 120px;
+			margin-left: 10px;
+		}
     </style>
 </head>
 <!-- end::Head -->
@@ -4678,10 +4687,18 @@
 
                                         <div class="ml-auto">
                                             Exclude Customers with Tags:
-                                            <button class="btn btn-primary"
+                                            <!-- <button class="btn btn-primary"
                                                 type="button">
                                                 Non Selected
-                                        </button>
+                                        </button> -->
+										
+										<div class="ml-auto">
+                                           <select name="non_selected" id="non_selected" class="form-control" >
+                                                <option value="" disabled="">Select One</option>
+                                                <option value="tag1">Tag 1</option>
+                                                <option value="tag2">Tag 2</option>
+                                            </select>
+                                        </div>
                                         </div>
                                     </div>
 
