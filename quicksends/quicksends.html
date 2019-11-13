@@ -1,16 +1,4 @@
 <!DOCTYPE html>
-<!--
-Template Name: Metronic - Responsive Admin Dashboard Template build with Twitter Bootstrap 4
-Author: KeenThemes
-Website: http://www.keenthemes.com/
-Contact: support@keenthemes.com
-Follow: www.twitter.com/keenthemes
-Dribbble: www.dribbble.com/keenthemes
-Like: www.facebook.com/keenthemes
-Purchase: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-Renew Support: http://themeforest.net/item/metronic-responsive-admin-dashboard-template/4021469?ref=keenthemes
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
--->
 <html lang="en">
 <!-- begin::Head -->
 <head>
@@ -23,9 +11,10 @@ License: You must have a valid license purchased only from themeforest(the above
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <!--begin::Web font -->
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <!--    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">-->
     <script>
         WebFont.load({
-            google: {"families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700"]},
+            google: {"families": ["Poppins:300,400,500,600,700", "Roboto:300,400,500,600,700", "Open Sans:400,600,700"]},
             active: function () {
                 sessionStorage.fonts = true;
             }
@@ -93,14 +82,14 @@ License: You must have a valid license purchased only from themeforest(the above
             text-align: center;
             font-weight: 400;
             background: #ddd;
+            transition: all .4s;
         }
 
         .quick-sends-mailing .row .col-lg-3 {
             margin-bottom: 10px;
         }
 
-        .quick-send-modal .modal-dialog,
-        #upload_custom_temp .modal-dialog {
+        .quick-send-modal .modal-dialog, #upload_custom_temp .modal-dialog {
             max-width: 980px;
         }
 
@@ -119,9 +108,12 @@ License: You must have a valid license purchased only from themeforest(the above
             text-align: left;
         }
 
-        .quick-send-setup-modal .nav.nav-pills .nav-item, .quick-send-setup-modal .nav.nav-tabs .nav-item a:hover, .quick-send-setup-modal a.nav-link.btn.btn-metal.m-btn.m-btn--icon.active.show {
-            background: #2e40d4;
-            border-color: #5c9e05 !important;
+        .quick-send-setup-modal .nav.nav-pills .nav-item,
+        .quick-send-setup-modal .nav.nav-tabs .nav-item a:hover,
+        .quick-send-setup-modal .leftcol a.nav-link.active.show {
+            background: #4286AC;
+            border-color: #36a3f7 !important;
+            color: #fff;
         }
 
         .quick-send-setup-modal .quick-sends .tab-content h3 {
@@ -129,16 +121,35 @@ License: You must have a valid license purchased only from themeforest(the above
             font-size: 12px;
         }
 
+        .select-result .form-control label {
+            margin-bottom: 0;
+            background: #ddd;
+            padding-bottom: 6px;
+            transition: all .4s;
+        }
+
         .select-result .form-control {
             flex: 0 0 150px;
+            margin: 8px 5px 10px;
+            padding: 0;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all .4s;
+        }
+
+        .select-result .form-control:hover label, .select-result .form-control:focus label, .select-result .form-control:active label {
+            background-color: #4286AC;
+            border-radius: 0;
+            color: #fff;
+        }
+
+        .select-result .form-control:hover, .select-result .form-control:focus, .select-result .form-control:active {
+            border-color: #4286AC;
+            border-radius: 0;
         }
 
         .select-result img {
             margin-bottom: 10px;
-        }
-
-        .select-result .form-control {
-            margin: 8px 5px;
         }
 
         ul.nav.mqs-nav-tabs li {
@@ -169,24 +180,93 @@ License: You must have a valid license purchased only from themeforest(the above
 
         .contentEditable.test li {
             background: transparent;
-            margin-left: 0 !important;
+            margin-left: 2px !important;
+            margin-bottom: 0 !important;
         }
 
         .contentEditable.test li a {
-            color: #000 !important;
             border: 1px solid transparent !important;
             transition: all .4s;
+            background: #ddd;
+            color: #000 !important;
+            display: flex;
+            font-weight: 500 !important;
         }
 
         .contentEditable.test li a.active.show {
             border-color: #ddd !important;
-            border-bottom: 0 !important;
+            border-bottom-color: transparent !important;
+            background: #fff !important;
+            color: #000;
         }
 
         .contentEditable.test li a:focus {
             border-color: transparent !important;
             outline: 0 !important;
         }
+
+        .modal-body.quick-send-setup-modal .m-portlet {
+            margin-bottom: 0;
+        }
+
+        .leftcol {
+            background: #F5F4F6;
+        }
+
+        .leftcol .nav.nav-pills .nav-link, .leftcol .nav.nav-tabs .nav-link {
+            color: #777;
+        }
+
+        .leftcol .credit-info {
+            display: flex;
+            justify-content: center;
+        }
+
+        .leftcol .credit-info span {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            background: #fff;
+            border: 2px solid #d5d5d5;
+            align-items: center;
+            font-size: 25px;
+            text-align: center;
+            overflow: hidden;
+            display: flex;
+            margin: 30px 0;
+        }
+
+        button.btn, .btn {
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 600;
+        }
+
+        .custom-btns .btn-primary i {
+            font-weight: inherit;
+        }
+
+        .custom-btns .btn-primary.custom-color {
+            background: #8B2CBA;
+        }
+
+
+        .mailing_type .href {
+            border: 2px solid transparent;
+            text-decoration: none;
+            display: block;
+        }
+
+        .mailing_type .href:focus, .mailing_type .href:active, .mailing_type .href:hover {
+            border-color: #4286AC;
+        }
+
+        .mailing_type .href:focus h3, .mailing_type .href:active h3, .mailing_type .href:hover h3 {
+            background: #4286AC;
+            color: #fff;
+        }
+        .common-href{}
     </style>
 </head>
 <!-- end::Head -->
@@ -3443,36 +3523,10 @@ License: You must have a valid license purchased only from themeforest(the above
                         <h3 class="m-subheader__title m-subheader__title--separator border-0">
                             My Quick Sends
                         </h3>
-                        <!-- <ul class="m-subheader__breadcrumbs m-nav m-nav--inline">
-                            <li class="m-nav__item m-nav__item--home">
-                                <a href="#" class="m-nav__link m-nav__link--icon">
-                                    <i class="m-nav__link-icon la la-home"></i>
-                                </a>
-                            </li>
-                            <li class="m-nav__separator">
-                                -
-                            </li>
-                            <li class="m-nav__item">
-                                <a href="" class="m-nav__link">
-											<span class="m-nav__link-text">
-												My Quick Sends
-											</span>
-                                </a>
-                            </li>
-                            <li class="m-nav__separator">
-                                -
-                            </li>
-                            <li class="m-nav__item">
-                                <a href="" class="m-nav__link">
-											<span class="m-nav__link-text">
-												My Quick Sends
-											</span>
-                                </a>
-                            </li>
-                        </ul> -->
 
                         <div class="btn-groups custom-btns float-right">
-                            <button class="btn btn-primary mr-1" data-target="#m_modal_1" data-toggle="modal"
+                            <button class="btn btn-primary mr-1 custom-color" data-target="#m_modal_1"
+                                    data-toggle="modal"
                                     type="button">
                                 <i class="la la-plus"></i> Add Sequence
                             </button>
@@ -3542,11 +3596,11 @@ License: You must have a valid license purchased only from themeforest(the above
                                                 <div class="m-portlet__body">
                                                     <div class="col-md-12">
                                                         <div class="row">
-                                                            <div class="col-md-3">
+                                                            <div class="col-md-3 px-0 leftcol">
                                                                 <ul class="nav nav-tabs d-flex flex-column"
                                                                     role="tablist">
                                                                     <li class="nav-item">
-                                                                        <a class="nav-link btn btn-metal m-btn m-btn--icon active show"
+                                                                        <a class="nav-link m-btn m-btn--icon active show"
                                                                            data-toggle="tab"
                                                                            href="#m_tabs_3_1">
                                                                             Mailing Type
@@ -3554,7 +3608,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     </li>
 
                                                                     <li class="nav-item">
-                                                                        <a class="nav-link btn btn-metal m-btn m-btn--icon"
+                                                                        <a class="nav-link m-btn m-btn--icon"
                                                                            data-toggle="tab"
                                                                            href="#m_tabs_3_3">
                                                                             Postcard Size
@@ -3562,7 +3616,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     </li>
 
                                                                     <li class="nav-item">
-                                                                        <a class="nav-link btn btn-metal m-btn m-btn--icon"
+                                                                        <a class="nav-link m-btn m-btn--icon"
                                                                            data-toggle="tab"
                                                                            href="#m_tabs_3_4">
                                                                             Template
@@ -3570,7 +3624,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     </li>
 
                                                                     <li class="nav-item">
-                                                                        <a class="nav-link btn btn-metal m-btn m-btn--icon"
+                                                                        <a class="nav-link m-btn m-btn--icon"
                                                                            data-toggle="tab"
                                                                            href="#m_tabs_3_5">
                                                                             Customize Content
@@ -3578,7 +3632,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     </li>
 
                                                                     <li class="nav-item">
-                                                                        <a class="nav-link btn btn-metal m-btn m-btn--icon"
+                                                                        <a class="nav-link m-btn m-btn--icon"
                                                                            data-toggle="tab"
                                                                            href="#m_tabs_3_6">
                                                                             Save As
@@ -3586,6 +3640,10 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                     </li>
 
                                                                 </ul>
+
+                                                                <div class="credit-info">
+                                                                    <span>1<br/> Credit </br>Each</span>
+                                                                </div>
                                                             </div>
                                                             <div class="col-md-9 pt-4">
                                                                 <div class="tab-content quick-sends-mailing">
@@ -3596,50 +3654,47 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <h4>Mailing Type</h4>
                                                                             <p>Select Your mailing Type Below</p>
                                                                         </div>
-                                                                        <div class="row">
+                                                                        <div class="row mailing_type">
                                                                             <div class="col-lg-3">
-                                                                                <img class="img-fluid"
-                                                                                     src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
-                                                                                <h3>Postcard</h3>
+                                                                                <a class="href" href="#">
+                                                                                    <img class="img-fluid"
+                                                                                         src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
+                                                                                    <h3>Postcard</h3>
+                                                                                </a>
                                                                             </div>
                                                                             <div class="col-lg-3">
-                                                                                <img class="img-fluid"
-                                                                                     src="../../../../../angular/src/media/app/img/blog/blog2.jpg"/>
-                                                                                <h3>Email</h3>
+                                                                                <a class="href" href="#">
+                                                                                    <img class="img-fluid"
+                                                                                         src="../../../../../angular/src/media/app/img/blog/blog2.jpg"/>
+                                                                                    <h3>Email</h3>
+                                                                                </a>
                                                                             </div>
                                                                             <div class="col-lg-3">
-
-                                                                                <img class="img-fluid"
-                                                                                     src="../../../../../angular/src/media/app/img/blog/blog1.jpg"/>
-                                                                                <h3>Letter</h3>
+                                                                                <a class="href" href="#">
+                                                                                    <img class="img-fluid"
+                                                                                         src="../../../../../angular/src/media/app/img/blog/blog1.jpg"/>
+                                                                                    <h3>Letter</h3>
+                                                                                </a>
                                                                             </div>
                                                                             <div class="col-lg-3">
-                                                                                <img class="img-fluid"
-                                                                                     src="../../../../../angular/src/media/app/img/blog/blog1.jpg"/>
-                                                                                <h3>Greeting
-                                                                                    Card</h3>
+                                                                                <a class="href" href="#">
+                                                                                    <img class="img-fluid"
+                                                                                         src="../../../../../angular/src/media/app/img/blog/blog1.jpg"/>
+                                                                                    <h3>Greeting
+                                                                                        Card</h3>
+                                                                                </a>
                                                                             </div>
                                                                             <div class="col-lg-3">
-                                                                                <img class="img-fluid"
-                                                                                     src="../../../../../angular/src/media/app/img/blog/blog1.jpg"/>
-                                                                                <h3>Gift</h3>
+                                                                                <a class="href" href="#">
+                                                                                    <img class="img-fluid"
+                                                                                         src="../../../../../angular/src/media/app/img/blog/blog1.jpg"/>
+                                                                                    <h3>Gift</h3>
+                                                                                </a>
                                                                             </div>
                                                                         </div>
 
                                                                     </div>
                                                                     <!-- Mailing Type End -->
-
-                                                                    <!-- <div class="tab-pane" id="m_tabs_3_2" role="tabpanel">
-                                                                        It has survived not only five centuries, but
-                                                                        also the leap into electronic
-                                                                        typesetting, remaining essentially unchanged. It
-                                                                        was popularised in the 1960s
-                                                                        with the release of Letraset sheets containing
-                                                                        Lorem Ipsum passages, and more
-                                                                        recently with desktop publishing software like
-                                                                        Aldus PageMaker including
-                                                                        versions of Lorem Ipsum.
-                                                                    </div>-->
 
                                                                     <!-- Post Card Size Start -->
                                                                     <div class="tab-pane" id="m_tabs_3_3"
@@ -3649,18 +3704,25 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                             <p>Select Your card size</p>
                                                                         </div>
                                                                         <form action="">
-                                                                            <label for="postcard_size">
+                                                                            <label class="m-radio m-radio--solid m-radio--state-success"
+                                                                                   for="postcard_size">
                                                                                 <input id="postcard_size"
-                                                                                       name="postcard_size"
-                                                                                       type="radio" value="4_6">&nbsp;4
-                                                                                X 6
+                                                                                       name="postcard_size" type="radio"
+                                                                                       value="4_6">
+                                                                                4 X 6
+                                                                                <span></span>
                                                                             </label> <br>
-                                                                            <label for="postcard_size2">
+                                                                            <label class="m-radio m-radio--solid m-radio--state-brand"
+                                                                                   for="postcard_size2">
                                                                                 <input id="postcard_size2"
-                                                                                       name="postcard_size"
-                                                                                       type="radio" value="5_8">&nbsp;5
+                                                                                       name="postcard_size" type="radio"
+                                                                                       value="5_8">
+                                                                                &nbsp;5
                                                                                 X 8
+                                                                                <span></span>
                                                                             </label>
+
+
                                                                         </form>
                                                                     </div>
                                                                     <!-- Post Card Size End -->
@@ -3697,20 +3759,26 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                 <!-- d-none -->
                                                                                 <form action="">
                                                                                     <div class="form-group d-flex flex-wrap">
-                                                                                        <div class="form-control">
-                                                                                            <label for="select1"><img
-                                                                                                    class="img-fluid"
-                                                                                                    src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
-                                                                                                <input id="select1"
-                                                                                                       name="select1"
-                                                                                                       type="radio">Select</label>
+                                                                                        <div class="form-control common-href">
+
+                                                                                            <!--                                                            <label for="select1">-->
+                                                                                            <!--                                                                <a class="href" href="#">-->
+                                                                                            <!--                                                                    <img class="img-fluid" src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>-->
+                                                                                            <!--                                                                    <input id="select1" name="select" type="radio">Select </a>-->
+                                                                                            <!--                                                            </label>-->
+
+                                                                                            <a class="href" href="#">
+                                                                                                <img class="img-fluid"
+                                                                                                     src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
+                                                                                                Select </a>
+
                                                                                         </div>
                                                                                         <div class="form-control">
                                                                                             <label for="select2"><img
                                                                                                     class="img-fluid"
                                                                                                     src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
                                                                                                 <input id="select2"
-                                                                                                       name="select2"
+                                                                                                       name="select"
                                                                                                        type="radio">Select</label>
                                                                                         </div>
                                                                                         <div class="form-control">
@@ -3718,7 +3786,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                                     class="img-fluid"
                                                                                                     src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
                                                                                                 <input id="select3"
-                                                                                                       name="select3"
+                                                                                                       name="select"
                                                                                                        type="radio">Select</label>
                                                                                         </div>
                                                                                         <div class="form-control">
@@ -3726,7 +3794,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                                     class="img-fluid"
                                                                                                     src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
                                                                                                 <input id="select4"
-                                                                                                       name="select4"
+                                                                                                       name="select"
                                                                                                        type="radio">Select</label>
                                                                                         </div>
                                                                                         <div class="form-control">
@@ -3734,7 +3802,7 @@ License: You must have a valid license purchased only from themeforest(the above
                                                                                                     class="img-fluid"
                                                                                                     src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
                                                                                                 <input id="select5"
-                                                                                                       name="select5"
+                                                                                                       name="select"
                                                                                                        type="radio">Select</label>
                                                                                         </div>
                                                                                     </div>
