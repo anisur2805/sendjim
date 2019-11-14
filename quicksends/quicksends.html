@@ -30,243 +30,45 @@
 
     <style>
 
-        div#m_modal_2, .modal.fade.upload-custom-template, div#m_modal_1 {
-            padding-right: 0 !important;
-        }
+        div#m_modal_2, .modal.fade.upload-custom-template, div#m_modal_1 {padding-right: 0 !important;}
+        .quick-sends .m-portlet--tabs .m-portlet__body {position: relative;background: #ddd;border-radius: 4px;outline: 0;overflow: hidden;border: 0;padding: 10px;}  .m-portlet--tabs.m-portlet--purple .m-portlet__body {background: #7302ba;}  .m-portlet--tabs.m-portlet--green .m-portlet__body {background: #5c9e05;}  .quick-sends .tab-content .m-portlet.m-portlet--tabs .m-portlet__head {padding: 0;}  .quick-sends .m-portlet.m-portlet--tabs .m-portlet__head {padding: 0;}  .quick-sends-mailing .m-portlet__head {padding: 0;border: 0;margin-bottom: 10px;}  .quick-sends .tab-content h3, .quick-sends-mailing .tab-content h3 {color: #fff;font-size: 16px;margin: 0;padding: 9px 0 0;text-align: center;font-weight: 400;}  .quick-sends-mailing h3 {padding: 9px 0 6px;color: #000;font-size: 14px;margin: 0;text-align: center;font-weight: 400;background: #ddd;transition: all .4s;}  .quick-sends-mailing .row .col-lg-3 {margin-bottom: 10px;}  .quick-send-modal .modal-dialog, #upload_custom_temp .modal-dialog {max-width: 980px;}  .quick-send-setup-modal .m-portlet__body, .quick-send-setup-modal .m-portlet .m-portlet__body, .modal-body.quick-send-setup-modal {padding: 0 !important;}  .quick-send-setup-modal .nav.nav-pills .nav-item, .quick-send-setup-modal .nav.nav-tabs .nav-item {margin: 0;}  .quick-send-setup-modal .nav.nav-pills .nav-item, .quick-send-setup-modal .nav.nav-tabs .nav-item a {border-radius: 0;border: 0 !important;border-left: 2px solid transparent !important;text-align: left;margin-top: 1px;}  .quick-send-setup-modal .nav.nav-pills .nav-item, .quick-send-setup-modal .nav.nav-tabs .nav-item a:hover, .quick-send-setup-modal .leftcol a.nav-link.active.show {background: #4286AC;border-color: #36a3f7 !important;color: #fff;}  .quick-send-setup-modal .quick-sends .tab-content h3 {padding: 9px 0 6px;font-size: 12px;}  .select-result .form-control label {margin-bottom: 0;background: #ddd;padding-bottom: 6px;transition: all .4s;}  .select-result .form-control {text-align: center;border: 0;transition: all .4s;}  .select-result .form-control:hover label, .select-result .form-control:focus label, .select-result .form-control:active label {background-color: #4286AC;border-radius: 0;color: #fff;}  .select-result .form-control:hover, .select-result .form-control:focus, .select-result .form-control:active {border-color: #4286AC;border-radius: 0;}  ul.nav.mqs-nav-tabs li {margin-bottom: 8px;}  .upload-custom-template .tab-body-content {width: 60%;}  .upload-custom-template .tab-body-content .preview-head {display: flex;}  @media (max-width: 767px) {  .select-result .form-group.flex-wrap {flex-wrap: wrap !important;}  .select-result .form-control {flex: 0 0 90px;}  }  .nav.nav-pills .nav-link, .nav.nav-tabs .nav-link {color: #fff;}  .contentEditable.test li {background: transparent;margin-left: 2px !important;margin-bottom: 0 !important;}  .contentEditable.test li a {border: 1px solid transparent !important;transition: all .4s;background: #ddd;color: #000 !important;display: flex;font-weight: 500 !important;}  .contentEditable.test li a.active.show {border-color: #ddd !important;border-bottom-color: transparent !important;background: #fff !important;color: #000;}  .contentEditable.test li a:focus {border-color: transparent !important;outline: 0 !important;}  .modal-body.quick-send-setup-modal .m-portlet {margin-bottom: 0;}  .leftcol {background: #F5F4F6;}  .leftcol .nav.nav-pills .nav-link, .leftcol .nav.nav-tabs .nav-link {color: #777;}  .leftcol .credit-info {display: flex;justify-content: center;}  .leftcol .credit-info span {width: 150px;height: 150px;border-radius: 50%;justify-content: center;align-items: center;background: #fff;border: 2px solid #d5d5d5;align-items: center;font-size: 25px;text-align: center;overflow: hidden;display: flex;margin: 30px 0;}  button.btn, .btn {font-family: 'Open Sans', sans-serif;font-weight: 600;}  .custom-btns .btn-primary i {font-weight: inherit;}  .custom-btns .btn-primary.custom-color {background: #8B2CBA;}  .mailing_type .href {border: 2px solid transparent;text-decoration: none;display: block;}  .mailing_type .href:focus, .mailing_type .href:active, .mailing_type .href:hover {border-color: #4286AC;}  .mailing_type .href:focus h3, .mailing_type .href:active h3, .mailing_type .href:hover h3 {background: #4286AC;color: #fff;}  .modal .modal-content .modal-header .close{padding-top: 30px;}
+        .quick-sends .tab-content .tab-pane {position: relative; overflow: hidden}
 
-        .quick-sends .m-portlet--tabs .m-portlet__body {
-            background: #ddd;
-            border-radius: 4px;
-            outline: 0;
-            overflow: hidden;
-            border: 0;
-            padding: 10px;
-        }
+        .quick-sends .custom-badge { position: absolute;padding: 10px;background: #5867dd;font-size: 13px;line-height: 16px;display: block;width: 100%;transform: rotate(45deg);text-align: center;top: 10px;right: -96px;color: #fff;font-weight: 600;}
 
-        .m-portlet--tabs.m-portlet--purple .m-portlet__body {
-            background: #7302ba;
-        }
+        .add-seq.modal.quick-send-modal{/*left:unset;z-index: 2; width: 600px; top: 150px;width: 1200px;top: 50px;*/}  .modal-backdrop.fade.show{background-color: transparent;opacity: 1 !important;left: unset;z-index: unset;}
 
-        .m-portlet--tabs.m-portlet--green .m-portlet__body {
-            background: #5c9e05;
-        }
-
-        .quick-sends .tab-content .m-portlet.m-portlet--tabs .m-portlet__head {
-            padding: 0;
-        }
-
-        .quick-sends .m-portlet.m-portlet--tabs .m-portlet__head {
-            padding: 0;
-        }
-
-        .quick-sends-mailing .m-portlet__head {
-            padding: 0;
-            border: 0;
-            margin-bottom: 10px;
-        }
-
-        .quick-sends .tab-content h3, .quick-sends-mailing .tab-content h3 {
-            color: #fff;
-            font-size: 16px;
-            margin: 0;
-            padding: 9px 0 0;
-            text-align: center;
-            font-weight: 400;
-        }
-
-        .quick-sends-mailing h3 {
-            padding: 9px 0 6px;
-            color: #000;
-            font-size: 14px;
-            margin: 0;
-            text-align: center;
-            font-weight: 400;
-            background: #ddd;
-            transition: all .4s;
-        }
-
-        .quick-sends-mailing .row .col-lg-3 {
-            margin-bottom: 10px;
-        }
-
-        .quick-send-modal .modal-dialog, #upload_custom_temp .modal-dialog {
-            max-width: 980px;
-        }
-
-        .quick-send-setup-modal .m-portlet__body, .quick-send-setup-modal .m-portlet .m-portlet__body, .modal-body.quick-send-setup-modal {
-            padding: 0 !important;
-        }
-
-        .quick-send-setup-modal .nav.nav-pills .nav-item, .quick-send-setup-modal .nav.nav-tabs .nav-item {
-            margin: 0;
-        }
-
-        .quick-send-setup-modal .nav.nav-pills .nav-item, .quick-send-setup-modal .nav.nav-tabs .nav-item a {
-            border-radius: 0;
-            border: 0 !important;
-            border-left: 2px solid transparent !important;
-            text-align: left;
-        }
-
-        .quick-send-setup-modal .nav.nav-pills .nav-item,
-        .quick-send-setup-modal .nav.nav-tabs .nav-item a:hover,
-        .quick-send-setup-modal .leftcol a.nav-link.active.show {
-            background: #4286AC;
-            border-color: #36a3f7 !important;
-            color: #fff;
-        }
-
-        .quick-send-setup-modal .quick-sends .tab-content h3 {
-            padding: 9px 0 6px;
-            font-size: 12px;
-        }
-
-        .select-result .form-control label {
-            margin-bottom: 0;
-            background: #ddd;
-            padding-bottom: 6px;
-            transition: all .4s;
-        }
-
-        .select-result .form-control {
-            flex: 0 0 150px;
-            margin: 8px 5px 10px;
-            padding: 0;
-            text-align: center;
-            border: 2px solid transparent;
-            transition: all .4s;
-        }
-
-        .select-result .form-control:hover label, .select-result .form-control:focus label, .select-result .form-control:active label {
-            background-color: #4286AC;
-            border-radius: 0;
-            color: #fff;
-        }
-
-        .select-result .form-control:hover, .select-result .form-control:focus, .select-result .form-control:active {
-            border-color: #4286AC;
-            border-radius: 0;
-        }
-
-        .select-result img {
-            margin-bottom: 10px;
-        }
-
-        ul.nav.mqs-nav-tabs li {
-            margin-bottom: 8px;
-        }
-
-        .upload-custom-template .tab-body-content {
-            width: 60%;
-        }
-
-        .upload-custom-template .tab-body-content .preview-head {
+        .delivary-time-lebel {display: flex;justify-content: space-between;width: 535px;}  .quick-send-modal.add-seq .fa-plus.add{background: #5867dd;color: #fff;border-radius: 50%;width: 30px;text-align: center;height: 30px;line-height: 31px;}  .choose_dd{margin-bottom: 10px;}  .choose_dd label {display: flex;align-items: center;}  .choose_dd input {width: auto;margin-right: 8px;}
+        .quick-send-actions {
             display: flex;
-        }
-
-        @media (max-width: 767px) {
-            .select-result .form-group.flex-wrap {
-                flex-wrap: wrap !important;
-            }
-
-            .select-result .form-control {
-                flex: 0 0 90px;
-            }
-        }
-
-        .nav.nav-pills .nav-link, .nav.nav-tabs .nav-link {
-            color: #fff;
-        }
-
-        .contentEditable.test li {
-            background: transparent;
-            margin-left: 2px !important;
-            margin-bottom: 0 !important;
-        }
-
-        .contentEditable.test li a {
-            border: 1px solid transparent !important;
-            transition: all .4s;
-            background: #ddd;
-            color: #000 !important;
-            display: flex;
-            font-weight: 500 !important;
-        }
-
-        .contentEditable.test li a.active.show {
-            border-color: #ddd !important;
-            border-bottom-color: transparent !important;
-            background: #fff !important;
-            color: #000;
-        }
-
-        .contentEditable.test li a:focus {
-            border-color: transparent !important;
-            outline: 0 !important;
-        }
-
-        .modal-body.quick-send-setup-modal .m-portlet {
-            margin-bottom: 0;
-        }
-
-        .leftcol {
-            background: #F5F4F6;
-        }
-
-        .leftcol .nav.nav-pills .nav-link, .leftcol .nav.nav-tabs .nav-link {
-            color: #777;
-        }
-
-        .leftcol .credit-info {
-            display: flex;
+            flex-wrap: wrap;
             justify-content: center;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 999;
+            opacity: 0;
+            transition: all .4s;
         }
 
-        .leftcol .credit-info span {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            justify-content: center;
-            align-items: center;
-            background: #fff;
-            border: 2px solid #d5d5d5;
-            align-items: center;
-            font-size: 25px;
-            text-align: center;
-            overflow: hidden;
-            display: flex;
-            margin: 30px 0;
+        .m-portlet--tabs .m-portlet__body:hover .quick-send-actions{
+            opacity: 1;
         }
 
-        button.btn, .btn {
-            font-family: 'Open Sans', sans-serif;
-            font-weight: 600;
-        }
-
-        .custom-btns .btn-primary i {
-            font-weight: inherit;
-        }
-
-        .custom-btns .btn-primary.custom-color {
-            background: #8B2CBA;
-        }
-
-
-        .mailing_type .href {
-            border: 2px solid transparent;
-            text-decoration: none;
-            display: block;
-        }
-
-        .mailing_type .href:focus, .mailing_type .href:active, .mailing_type .href:hover {
-            border-color: #4286AC;
-        }
-
-        .mailing_type .href:focus h3, .mailing_type .href:active h3, .mailing_type .href:hover h3 {
-            background: #4286AC;
+        .quick-send-actions a.btn {
+            background: #32B9A0;
             color: #fff;
+            width: 80px;
+            margin: 10px 10px 0;
+            padding: 0.55rem .5rem;
         }
-        .common-href{}
+        .quick-send-actions a.delete {
+            background: #EE6574;
+        }
+        .select-template span.select2 {
+            width: 100% !important;
+            display: block !important;
+        }
     </style>
 </head>
 <!-- end::Head -->
@@ -3535,7 +3337,7 @@
                                 <i class="la la-plus"></i> Add Quick Sends
                             </button>
                             <div aria-hidden="true" aria-labelledby="exampleModalLabel2"
-                                 class="modal fade quick-send-modal" id="m_modal_1"
+                                 class="modal fade quick-send-modal add-seq" id="m_modal_1"
                                  role="dialog"
                                  tabindex="-1">
                                 <div class="modal-dialog" role="document">
@@ -3557,13 +3359,28 @@
                                                     <input class="form-control" id="sequence_name" name="sequence_name"
                                                            required type="text" value="">
                                                 </div>
-                                                <div class="customize-content d-flex mt-4">
-                                                    <label class="col-md-4" for="delivary_schedule">Delivary
-                                                        Schedule</label>
-                                                    <input class="form-control" id="delivary_schedule"
-                                                           name="delivary_schedule"
-                                                           required type="text" value="">
+                                                <div class="customize-content mt-4">
+                                                    <div class="delivary-time-lebel">
+                                                       <span>
+                                                            <label for="delivary_schedule">Delivary Schedule</label>
+                                                        <p id="delivary_time"><i><strong>Immediatly</strong></i></p>
+                                                       </span>
+                                                        <a href="#" data-target="#schedule_time" data-toggle="modal" ><i class="fa fa-clock-o"></i></a>
+
+                                                        <a href=""><i class="fa fa-trash"></i></a>
+                                                    </div>
                                                 </div>
+                                                <div class="m-dropzone dropzone m-dropzone--success" action="inc/api/dropzone/upload.php" id="m-dropzone-three">
+                                                    <div class="m-dropzone__msg dz-message needsclick">
+                                                        <h3 class="m-dropzone__msg-title">
+                                                           <i class="fa fa-plus add"></i> Drop files here or click to upload.
+                                                        </h3>
+                                                        <span class="m-dropzone__msg-desc">
+														Only image, pdf and psd files are allowed for upload
+													</span>
+                                                    </div>
+                                                </div>
+
                                             </form>
                                         </div>
                                         <div class="modal-footer">
@@ -3735,31 +3552,37 @@
                                                                             <p>Select Template</p>
                                                                         </div>
                                                                         <div class="select-template-area">
-                                                                            <div class="select-template d-flex">
-                                                                                <select class="form-control"
-                                                                                        id="select_category"
-                                                                                        name="select_category">
-                                                                                    <option selected value="">Select
-                                                                                        Category
-                                                                                    </option>
-                                                                                    <option value="">Template 1</option>
-                                                                                    <option value="">Template 2</option>
-                                                                                    <option value="">Template 3</option>
-                                                                                    <option value="">Template 4</option>
-                                                                                </select>
-                                                                                <button class="btn btn-primary ml-3"
-                                                                                        data-target="#upload_custom_temp"
-                                                                                        data-toggle="modal"
-                                                                                        type="button"><i
-                                                                                        class="la la-cloud-upload"></i>
-                                                                                    Upload Custom Template
-                                                                                </button>
+                                                                            <div class="select-template">
+                                                                                <div class="row">
+                                                                                    <div class="col-md-6">
+                                                                                        <select class="form-control m-select2" id="m_select2_1" name="param">
+                                                                                            <option value="AK">
+                                                                                                Alaska
+                                                                                            </option>
+                                                                                            <option value="HI">
+                                                                                                Hawaii
+                                                                                            </option>
+                                                                                            <option value="CA">
+                                                                                                California
+                                                                                            </option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="col-md-6">
+                                                                                        <button class="btn btn-primary w-100"
+                                                                                                data-target="#upload_custom_temp"
+                                                                                                data-toggle="modal"
+                                                                                                type="button"><i
+                                                                                                class="la la-cloud-upload"></i>
+                                                                                            Upload Custom Template
+                                                                                        </button>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
                                                                             <div class="select-result mt-3">
                                                                                 <!-- d-none -->
                                                                                 <form action="">
-                                                                                    <div class="form-group d-flex flex-wrap">
-                                                                                        <div class="form-control common-href">
+                                                                                    <div class="form-group d-flex flex-wrap mailing_type row">
+                                                                                        <div class="form-control col-md-3">
 
                                                                                             <!--                                                            <label for="select1">-->
                                                                                             <!--                                                                <a class="href" href="#">-->
@@ -3770,40 +3593,32 @@
                                                                                             <a class="href" href="#">
                                                                                                 <img class="img-fluid"
                                                                                                      src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
-                                                                                                Select </a>
+                                                                                                <h3>Select</h3></a>
 
                                                                                         </div>
-                                                                                        <div class="form-control">
-                                                                                            <label for="select2"><img
-                                                                                                    class="img-fluid"
-                                                                                                    src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
-                                                                                                <input id="select2"
-                                                                                                       name="select"
-                                                                                                       type="radio">Select</label>
+                                                                                        <div class="form-control col-md-3">
+                                                                                            <a class="href" href="#">
+                                                                                                <img class="img-fluid"
+                                                                                                     src="../../../../../angular/src/media/app/img/blog/blog5.jpg"/>
+                                                                                                <h3>Select</h3></a>
                                                                                         </div>
-                                                                                        <div class="form-control">
-                                                                                            <label for="select3"><img
-                                                                                                    class="img-fluid"
-                                                                                                    src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
-                                                                                                <input id="select3"
-                                                                                                       name="select"
-                                                                                                       type="radio">Select</label>
+                                                                                        <div class="form-control col-md-3">
+                                                                                            <a class="href" href="#">
+                                                                                                <img class="img-fluid"
+                                                                                                     src="../../../../../angular/src/media/app/img/blog/blog4.jpg"/>
+                                                                                                <h3>Select</h3></a>
                                                                                         </div>
-                                                                                        <div class="form-control">
-                                                                                            <label for="select4"><img
-                                                                                                    class="img-fluid"
-                                                                                                    src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
-                                                                                                <input id="select4"
-                                                                                                       name="select"
-                                                                                                       type="radio">Select</label>
+                                                                                        <div class="form-control col-md-3">
+                                                                                            <a class="href" href="#">
+                                                                                                <img class="img-fluid"
+                                                                                                     src="../../../../../angular/src/media/app/img/blog/blog2.jpg"/>
+                                                                                                <h3>Select</h3></a>
                                                                                         </div>
-                                                                                        <div class="form-control">
-                                                                                            <label for="select5"><img
-                                                                                                    class="img-fluid"
-                                                                                                    src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
-                                                                                                <input id="select5"
-                                                                                                       name="select"
-                                                                                                       type="radio">Select</label>
+                                                                                        <div class="form-control col-md-3">
+                                                                                            <a class="href" href="#">
+                                                                                                <img class="img-fluid"
+                                                                                                     src="../../../../../angular/src/media/app/img/blog/blog1.jpg"/>
+                                                                                                <h3>Select</h3></a>
                                                                                         </div>
                                                                                     </div>
                                                                                 </form>
@@ -3822,20 +3637,33 @@
                                                                                 information for each card by using the
                                                                                 following list of special macros.</p>
 
-                                                                            <div class="customize-content d-flex align-items-center">
-                                                                                <p class="col-md-4 m-0">Insert a
-                                                                                    Macro</p>
-                                                                                <select class="form-control col-md-5"
-                                                                                        id="customize_content_sel"
-                                                                                        name="customize_content_sel">
-                                                                                    <option selected="" value="">Select
-                                                                                        One
-                                                                                    </option>
-                                                                                    <option value="">Template 1</option>
-                                                                                    <option value="">Template 2</option>
-                                                                                    <option value="">Template 3</option>
-                                                                                    <option value="">Template 4</option>
-                                                                                </select>
+                                                                            <div class="customize-content ">
+                                                                                <div class="row  align-items-center justify-content-between">
+                                                                                    <div class="col-md-6"><strong>Insert
+                                                                                        a Macro</strong>
+                                                                                    </div>
+                                                                                    <div class="col-md-6">
+                                                                                        <select class="form-control"
+                                                                                                id="customize_content_sel"
+                                                                                                name="customize_content_sel">
+                                                                                            <option selected=""
+                                                                                                    value="">Select One
+                                                                                            </option>
+                                                                                            <option value="">Template
+                                                                                                1
+                                                                                            </option>
+                                                                                            <option value="">Template
+                                                                                                2
+                                                                                            </option>
+                                                                                            <option value="">Template
+                                                                                                3
+                                                                                            </option>
+                                                                                            <option value="">Template
+                                                                                                4
+                                                                                            </option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                </div>
                                                                             </div>
 
                                                                             <div class="row">
@@ -3844,7 +3672,7 @@
                                                                                     <div class="summernote"
                                                                                          id="m_summernote_1"></div>
                                                                                 </div>
-                                                                                <div class="col-md-6 mt-4">
+                                                                                <div class="col-md-6 mt-4 text-center">
                                                                                     <div class="preview-area"
                                                                                          id="preview-area"></div>
                                                                                     <button class="btn btn-secondary"
@@ -3870,22 +3698,24 @@
                                                                         </div>
 
                                                                         <div class="tab-content-body">
-                                                                            <form action="">
-                                                                                <div class="form-group d-flex">
-                                                                                    <label for="quick_send_name">Give
+                                                                            <form action="col-md-12">
+                                                                                <div class="form-group row">
+                                                                                    <label for="quick_send_name" class="col-md-6">Give
                                                                                         your quick send setup a
                                                                                         name</label>
+                                                                                    <div class="col-md-6">
                                                                                     <input class="form-control"
                                                                                            id="quick_send_name"
                                                                                            name="quick_send_name"
                                                                                            placeholder="My Template"
                                                                                            type="text">
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div class="form-group d-flex">
-                                                                                    <label for="quick_send_cat"
-                                                                                           style="width: 242px;">Quick
+                                                                                <div class="form-group row">
+                                                                                    <label class="col-md-6" for="quick_send_cat" style="width: 242px;">Quick
                                                                                         Send Category</label>
-                                                                                    <select class="form-control"
+                                                                                    <div class="col-md-6">
+                                                                                        <select class="form-control"
                                                                                             id="quick_send_cat"
                                                                                             name="quick_send_cat">
                                                                                         <option selected="" value="">
@@ -3900,6 +3730,7 @@
                                                                                         <option value="">Template 4
                                                                                         </option>
                                                                                     </select>
+                                                                                    </div>
                                                                                 </div>
                                                                             </form>
                                                                         </div>
@@ -3915,12 +3746,11 @@
                                             </div>
                                         </div>
                                         <div class="modal-footer">
-                                            <button class="btn btn-secondary mr-auto" data-dismiss="modal"
-                                                    type="button"> Close
+                                            <button class="btn btn-secondary mr-auto" data-dismiss="modal" type="button"> Close
                                             </button>
-                                            <button class="btn btn-metal" type="button"> Prev</button>
-                                            <button class="btn btn-primary" type="button"> Next</button>
-                                            <button class="btn btn-primary d-none" type="button"> Submit</button>
+                                            <button class="btn btn-metal" type="button">Prev</button>
+                                            <button class="btn btn-primary" type="button">Next</button>
+                                            <button class="btn btn-primary d-none" type="button">Submit</button>
                                         </div>
                                     </div>
                                 </div>
@@ -4058,7 +3888,73 @@
                             <!-- Uploaded Custom Template End-->
 
                         </div>
-
+                        <div aria-labelledby="schedule_time_label" class="modal fade choose_delivary_day_modal" id="schedule_time" role="dialog" tabindex="-1">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-center w-100" id="schedule_time_label">
+                                            Choose Delivary Day
+                                        </h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form action="">
+                                            <div class="col-md-12">
+                                                <div class="row choose_dd">
+                                                    <div class="col-md-6">
+                                                        <label for="quick_option"><input type="radio" class="form-control" name="quick_option" id="quick_option">
+                                                            Quick Option</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <select class="form-control" id="customize_content_sel" name="customize_content_sel">
+                                                            <option selected="" value="">Immediatly</option>
+                                                            <option value="">Template
+                                                                Tommorrow
+                                                            </option>
+                                                            <option value="">Template
+                                                                In 3 Days
+                                                            </option>
+                                                            <option value="">Template
+                                                                In 1 Week
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="row choose_dd">
+                                                    <div class="col-md-6">
+                                                        <label for="exact_date"><input type="radio" class="form-control" name="exact_date" id="exact_date"> Exact Date</label>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label for="exact_date"><input type="text" name="exact_date" class="form-control" readonly id="m_datepicker_1"></label>
+                                                    </div>
+                                                </div>
+                                                <div class="row choose_dd">
+                                                    <div class="col-md-6">
+                                                        <label for="custom_option"><input type="radio" class="form-control" name="custom_option" id="custom_option"> Custom Option</label>
+                                                    </div>
+                                                    <div class="col-md-6 d-flex">
+                                                        <select class="form-control" id="" name="custom_option">
+                                                            <option selected="" value="">1</option>
+                                                            <option selected="" value="">2</option>
+                                                            <option selected="" value="">3</option>
+                                                            <option selected="" value="">4</option>
+                                                        </select>
+                                                        <select class="form-control ml-2" id="" name="customize_content_sel">
+                                                            <option selected="" value="">Days</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" data-dismiss="modal" type="button">
+                                            Cancle
+                                        </button>
+                                        <button class="btn btn-primary" type="button"> Save Changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div>
                     </div>
@@ -4123,6 +4019,14 @@
                                                                     <img class="img-fluid"
                                                                          src="../../../../../angular/src/media/app/img/blog/blog3.jpg"/>
                                                                     <h3>RB - Test Sequence</h3>
+                                                                    <span class="custom-badge">Email</span>
+
+                                                                    <div class="quick-send-actions">
+                                                                        <a href="#" class="edit btn">Edit</a>
+                                                                        <a href="#" class="delete btn">Delete</a>
+                                                                        <a href="#" class="share btn">Share</a>
+                                                                    </div>
+
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -4145,7 +4049,13 @@
                                                                      role="tabpanel">
                                                                     <img class="img-fluid"
                                                                          src="../../../../../angular/src/media/app/img/blog/blog2.jpg"/>
-                                                                    <h3>RB - Test Sequence </h3>
+                                                                    <h3>RB - Test Sequence 222</h3>
+                                                                    <span class="custom-badge">Email</span>
+                                                                    <div class="quick-send-actions">
+                                                                        <a href="#" class="edit btn">Edit</a>
+                                                                        <a href="#" class="delete btn">Delete</a>
+                                                                        <a href="#" class="share btn">Share</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -4169,7 +4079,13 @@
                                                                      role="tabpanel">
                                                                     <img class="img-fluid"
                                                                          src="../../../../../angular/src/media/app/img/blog/blog1.jpg"/>
-                                                                    <h3>RB - Test Sequence</h3>
+                                                                    <h3>RB - Test Sequence2225</h3>
+                                                                    <span class="custom-badge">Email</span>
+                                                                    <div class="quick-send-actions">
+                                                                        <a href="#" class="edit btn">Edit</a>
+                                                                        <a href="#" class="delete btn">Delete</a>
+                                                                        <a href="#" class="share btn">Share</a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -4898,6 +4814,7 @@
 
 <!-- begin::Quick Nav -->
 <!--begin::Base Scripts -->
+
 <script src="../../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
 <script src="../../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
 <script src="../../assets/vendors/custom/jquery-ui/jquery-ui.bundle.js" type="text/javascript"></script>
@@ -4905,6 +4822,9 @@
 <script src="../../assets/demo/default/custom/components/forms/widgets/bootstrap-markdown.js"
         type="text/javascript"></script>
 <script src="../../assets/demo/default/custom/components/forms/widgets/summernote.js" type="text/javascript"></script>
+<script src="../../assets/demo/default/custom/components/forms/widgets/dropzone.js" type="text/javascript"></script>
+<script src="../../assets/demo/default/custom/components/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script>
+<script src="../../assets/demo/default/custom/components/forms/widgets/select2.js" type="text/javascript"></script>
 <!--end::Base Scripts -->
 </body>
 <!-- end::Body -->
